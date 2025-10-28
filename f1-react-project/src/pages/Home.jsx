@@ -7,7 +7,7 @@ const Home = () => {
       id: 1,
       title: "2025 Season",
       link: "/season",
-      imgSrc: "/images/calendar.avif",
+      imgSrc: `${process.env.PUBLIC_URL}/images/calendar.avif`,
       imgAlt: "2025 calendar placeholder",
       description: "Full race calendar with dates, locations, and session times.",
     },
