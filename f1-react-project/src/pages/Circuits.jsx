@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Hero from "../components/Hero";
 import CircuitCard from "../components/CircuitCard";
 import "./../css/Circuits.css";
 
@@ -10,7 +11,6 @@ const Circuits = () => {
   useEffect(() => {
     const fetchCircuits = async () => {
       try {
-        // Replace this URL with your deployed server URL
         const response = await fetch("https://f1-server-vd2b.onrender.com/api/circuits");
         
         if (!response.ok) {
@@ -32,12 +32,7 @@ const Circuits = () => {
   if (loading) {
     return (
       <>
-        <section className="hero hero--tight">
-          <div className="container">
-            <h1>Circuits</h1>
-            <p className="lede">Loading circuits...</p>
-          </div>
-        </section>
+        <Hero tight={true} title="Circuits" subtitle="Loading circuits..." />
       </>
     );
   }
@@ -45,29 +40,23 @@ const Circuits = () => {
   if (error) {
     return (
       <>
-        <section className="hero hero--tight">
-          <div className="container">
-            <h1>Circuits</h1>
-            <p className="lede" style={{ color: "#ff2b2b" }}>
-              Error: {error}
-            </p>
-          </div>
-        </section>
+        <Hero tight={true} title="Circuits">
+          <h1>Circuits</h1>
+          <p className="lede" style={{ color: "#ff2b2b" }}>
+            Error: {error}
+          </p>
+        </Hero>
       </>
     );
   }
 
   return (
     <>
-      <section className="hero hero--tight">
-        <div className="container">
-          <h1>Circuits</h1>
-          <p className="lede">
-            Explore the 2025 Formula One circuits — from historic tracks to the
-            newest additions on the calendar.
-          </p>
-        </div>
-      </section>
+      <Hero
+        tight={true}
+        title="Circuits"
+        subtitle="Explore the 2025 Formula One circuits — from historic tracks to the newest additions on the calendar."
+      />
 
       <main className="container">
         <section className="circuits-grid" aria-label="Circuit cards">

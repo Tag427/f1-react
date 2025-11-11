@@ -1,3 +1,6 @@
+import Hero from "../components/Hero";
+import StandingsTable from "../components/StandingsTable";
+import DriverRow from "../components/DriverRow";
 import "./../css/Standings.css";
 
 const DriverStandings = () => {
@@ -26,40 +29,25 @@ const DriverStandings = () => {
 
   return (
     <>
-      <section className="hero hero--tight">
-        <div className="container">
-          <h1>Drivers Standings</h1>
-          <p className="lede">
-            Track the latest points and rankings for the 2025 Formula One World
-            Championship.
-          </p>
-        </div>
-      </section>
+      <Hero
+        tight={true}
+        title="Drivers Standings"
+        subtitle="Track the latest points and rankings for the 2025 Formula One World Championship."
+      />
 
       <main className="container">
         <h2 className="subhead">Drivers</h2>
-        <div className="table-wrap narrow">
-          <table className="standings">
-            <thead>
-              <tr>
-                <th scope="col">Rank</th>
-                <th scope="col">Name</th>
-                <th scope="col">Team</th>
-                <th scope="col">Points</th>
-              </tr>
-            </thead>
-            <tbody>
-              {drivers.map((driver) => (
-                <tr key={driver.rank}>
-                  <td>{driver.rank}</td>
-                  <td>{driver.name}</td>
-                  <td>{driver.team}</td>
-                  <td>{driver.points}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <StandingsTable headers={["Rank", "Name", "Team", "Points"]}>
+          {drivers.map((driver) => (
+            <DriverRow
+              key={driver.rank}
+              rank={driver.rank}
+              name={driver.name}
+              team={driver.team}
+              points={driver.points}
+            />
+          ))}
+        </StandingsTable>
       </main>
     </>
   );

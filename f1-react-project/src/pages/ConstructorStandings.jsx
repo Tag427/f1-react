@@ -1,3 +1,6 @@
+import Hero from "../components/Hero";
+import StandingsTable from "../components/StandingsTable";
+import ConstructorRow from "../components/ConstructorRow";
 import "./../css/Standings.css";
 
 const ConstructorStandings = () => {
@@ -16,40 +19,25 @@ const ConstructorStandings = () => {
 
   return (
     <>
-      <section className="hero hero--tight">
-        <div className="container">
-          <h1>Constructors Standings</h1>
-          <p className="lede">
-            Track the latest points and rankings for the 2025 Formula One
-            Constructors Championship.
-          </p>
-        </div>
-      </section>
+      <Hero
+        tight={true}
+        title="Constructors Standings"
+        subtitle="Track the latest points and rankings for the 2025 Formula One Constructors Championship."
+      />
 
       <main className="container">
         <h2 className="subhead">Constructors</h2>
-        <div className="table-wrap narrow">
-          <table className="standings">
-            <thead>
-              <tr>
-                <th scope="col">Rank</th>
-                <th scope="col">Team</th>
-                <th scope="col">Engine</th>
-                <th scope="col">Points</th>
-              </tr>
-            </thead>
-            <tbody>
-              {constructors.map((constructor) => (
-                <tr key={constructor.rank}>
-                  <td>{constructor.rank}</td>
-                  <td>{constructor.team}</td>
-                  <td>{constructor.engine}</td>
-                  <td>{constructor.points}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <StandingsTable headers={["Rank", "Team", "Engine", "Points"]}>
+          {constructors.map((constructor) => (
+            <ConstructorRow
+              key={constructor.rank}
+              rank={constructor.rank}
+              team={constructor.team}
+              engine={constructor.engine}
+              points={constructor.points}
+            />
+          ))}
+        </StandingsTable>
       </main>
     </>
   );

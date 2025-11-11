@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import Hero from "../components/Hero";
+import RaceRow from "../components/RaceRow";
 import "./../css/Season.css";
 
 const Season = () => {
@@ -31,15 +32,11 @@ const Season = () => {
 
   return (
     <>
-      <section className="hero hero--tight">
-        <div className="container">
-          <h1>2025 Formula 1 Season Schedule</h1>
-          <p className="lede">
-            All 24 races of the 2025 FIA Formula One World Championship. Dates,
-            locations, and quick links to race details – all in one place.
-          </p>
-        </div>
-      </section>
+      <Hero
+        tight={true}
+        title="2025 Formula 1 Season Schedule"
+        subtitle="All 24 races of the 2025 FIA Formula One World Championship. Dates, locations, and quick links to race details – all in one place."
+      />
 
       <main className="container">
         <div className="table-wrap">
@@ -55,19 +52,14 @@ const Season = () => {
             </thead>
             <tbody>
               {schedule.map((race) => (
-                <tr key={race.round}>
-                  <td>{race.round}</td>
-                  <td>{race.date}</td>
-                  <td>{race.gp}</td>
-                  <td>{race.location}</td>
-                  <td>
-                    {race.slug ? (
-                      <Link to={`/circuit/${race.slug}`}>View</Link>
-                    ) : (
-                      <span>View</span>
-                    )}
-                  </td>
-                </tr>
+                <RaceRow
+                  key={race.round}
+                  round={race.round}
+                  date={race.date}
+                  gp={race.gp}
+                  location={race.location}
+                  slug={race.slug}
+                />
               ))}
             </tbody>
           </table>
