@@ -3,12 +3,12 @@ import "./../css/CircuitDetail.css";
 
 const CircuitDetail = () => {
   const { slug } = useParams();
-  
+
   const circuitData = {
     melbourne: {
       name: "Melbourne Grand Prix Circuit",
       location: "Melbourne, Australia • Albert Park",
-      imgSrc: `${process.env.PUBLIC_URL}/images/melbourne2.avif`,
+      imgSrc: "/images/melbourne2.avif",
       overview:
         "A fast, semi-permanent street circuit around Melbourne's Albert Park, it features a smooth surface, flowing chicanes, and long DRS zones that create high average speeds. Heavy braking into tight corners provides prime overtaking opportunities, while the parkland backdrop and mix of straights and technical sections make it a challenging and distinctive venue.",
       facts: {
@@ -36,7 +36,7 @@ const CircuitDetail = () => {
     shanghai: {
       name: "Shanghai International Circuit",
       location: "Shanghai, China",
-      imgSrc: `${process.env.PUBLIC_URL}/images/shanghai.jpg`,
+      imgSrc: "/images/shanghai.jpg",
       overview:
         "A modern Hermann Tilke design, the Shanghai International Circuit is best known for its distinctive snail-shaped first sector and one of the longest straights in Formula 1. The track blends technical low-speed corners with high-speed sweepers, testing both aerodynamic efficiency and braking stability. Its mix of challenges makes it a true all-rounder for drivers and teams.",
       facts: {
@@ -63,7 +63,7 @@ const CircuitDetail = () => {
     suzuka: {
       name: "Suzuka Circuit",
       location: "Suzuka, Japan",
-      imgSrc: `${process.env.PUBLIC_URL}/images/suzuka.webp`,
+      imgSrc: "/images/suzuka.webp",
       overview:
         "Suzuka is one of Formula 1's most iconic circuits, famous for its unique figure-eight layout and challenging flow. Fast corners like 130R and the sweeping 'S Curves' demand precision and bravery, while its technical middle sector rewards balance and rhythm. With rich history and passionate fans, Suzuka is regarded as a true test of driver skill and one of the sport's classic venues.",
       facts: {
@@ -87,7 +87,7 @@ const CircuitDetail = () => {
     bahrain: {
       name: "Bahrain International Circuit",
       location: "Sakhir, Bahrain",
-      imgSrc: `${process.env.PUBLIC_URL}/images/bahrain.jpg`,
+      imgSrc: "/images/bahrain.jpg",
       overview:
         "A modern desert venue defined by heavy braking zones and long straights, Bahrain rewards traction and top speed. The stop-start layout creates multiple overtaking opportunities—especially into Turns 1, 4, and 11—while abrasive asphalt, wind, and shifting temperatures add strategy wrinkles for tyres and cooling. Night races under the lights make it a dramatic season staple.",
       facts: {
@@ -115,7 +115,7 @@ const CircuitDetail = () => {
     jeddah: {
       name: "Jeddah Corniche Circuit",
       location: "Jeddah, Saudi Arabia",
-      imgSrc: `${process.env.PUBLIC_URL}/images/jeddah.jpg`,
+      imgSrc: "/images/jeddah.jpg",
       overview:
         "One of the fastest street circuits in Formula 1, Jeddah strings together long, flowing, high-speed sweeps hemmed by close walls. The lap rewards commitment and aerodynamic efficiency, with brave side-by-side moves possible into the heavy-braking finales. Night conditions and coastal winds add an extra layer of challenge.",
       facts: {
@@ -143,7 +143,7 @@ const CircuitDetail = () => {
     miami: {
       name: "Miami International Autodrome",
       location: "Miami, USA",
-      imgSrc: `${process.env.PUBLIC_URL}/images/miami3.avif`,
+      imgSrc: "/images/miami3.avif",
       overview:
         "A fast, anti-clockwise temporary circuit wrapped around Hard Rock Stadium. Miami blends long full-throttle runs with a tight, technical stadium section and a heavy-braking hairpin at Turn 17. Mostly flat with some engineered elevation over the T14-T15 chicane, it rewards top-speed efficiency, traction, and confidence under braking.",
       facts: {
