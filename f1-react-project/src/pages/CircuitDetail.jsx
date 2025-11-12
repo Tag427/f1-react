@@ -3,7 +3,7 @@ import "./../css/CircuitDetail.css";
 
 const CircuitDetail = () => {
   const { slug } = useParams();
-
+  
   const circuitData = {
     melbourne: {
       name: "Melbourne Grand Prix Circuit",
@@ -26,11 +26,11 @@ const CircuitDetail = () => {
         "Zone 3 - Back straight • Detection before T9",
       ],
       schedule: [
-        { session: "Practice 1", time: "Fri - 13:30" },
-        { session: "Practice 2", time: "Fri - 17:00" },
-        { session: "Practice 3", time: "Sat - 12:30" },
-        { session: "Qualifying", time: "Sat - 16:00" },
-        { session: "Race", time: "Sun - 15:00" },
+        { session: "Practice 1", time: "Fri — 13:30" },
+        { session: "Practice 2", time: "Fri — 17:00" },
+        { session: "Practice 3", time: "Sat — 12:30" },
+        { session: "Qualifying", time: "Sat — 16:00" },
+        { session: "Race", time: "Sun — 15:00" },
       ],
     },
     shanghai: {
@@ -53,11 +53,11 @@ const CircuitDetail = () => {
         "Zone 2 - Start/Finish straight • Detection before Turn 16",
       ],
       schedule: [
-        { session: "Practice 1", time: "Fri - 11:30" },
-        { session: "Practice 2", time: "Fri - 15:00" },
-        { session: "Practice 3", time: "Sat - 12:00" },
-        { session: "Qualifying", time: "Sat - 15:00" },
-        { session: "Race", time: "Sun - 14:00" },
+        { session: "Practice 1", time: "Fri — 11:30" },
+        { session: "Practice 2", time: "Fri — 15:00" },
+        { session: "Practice 3", time: "Sat — 12:00" },
+        { session: "Qualifying", time: "Sat — 15:00" },
+        { session: "Race", time: "Sun — 14:00" },
       ],
     },
     suzuka: {
@@ -77,11 +77,11 @@ const CircuitDetail = () => {
       },
       drsZones: ["Zone 1 - Start/Finish straight • Detection before Turn 16"],
       schedule: [
-        { session: "Practice 1", time: "Fri - 11:30" },
-        { session: "Practice 2", time: "Fri - 15:00" },
-        { session: "Practice 3", time: "Sat - 12:00" },
-        { session: "Qualifying", time: "Sat - 15:00" },
-        { session: "Race", time: "Sun - 14:00" },
+        { session: "Practice 1", time: "Fri — 11:30" },
+        { session: "Practice 2", time: "Fri — 15:00" },
+        { session: "Practice 3", time: "Sat — 12:00" },
+        { session: "Qualifying", time: "Sat — 15:00" },
+        { session: "Race", time: "Sun — 14:00" },
       ],
     },
     bahrain: {
@@ -105,11 +105,11 @@ const CircuitDetail = () => {
         "Zone 3 - Between T10 and T11 • Detection after T9",
       ],
       schedule: [
-        { session: "Practice 1", time: "Fri - 11:30" },
-        { session: "Practice 2", time: "Fri - 15:00" },
-        { session: "Practice 3", time: "Sat - 12:00" },
-        { session: "Qualifying", time: "Sat - 15:00" },
-        { session: "Race", time: "Sun - 14:00" },
+        { session: "Practice 1", time: "Fri — 11:30" },
+        { session: "Practice 2", time: "Fri — 15:00" },
+        { session: "Practice 3", time: "Sat — 12:00" },
+        { session: "Qualifying", time: "Sat — 15:00" },
+        { session: "Race", time: "Sun — 14:00" },
       ],
     },
     jeddah: {
@@ -133,11 +133,11 @@ const CircuitDetail = () => {
         "Zone 3 - Between T25-T27 • Detection after T22",
       ],
       schedule: [
-        { session: "Practice 1", time: "Fri - 11:30" },
-        { session: "Practice 2", time: "Fri - 15:00" },
-        { session: "Practice 3", time: "Sat - 12:00" },
-        { session: "Qualifying", time: "Sat - 15:00" },
-        { session: "Race", time: "Sun - 14:00" },
+        { session: "Practice 1", time: "Fri — 11:30" },
+        { session: "Practice 2", time: "Fri — 15:00" },
+        { session: "Practice 3", time: "Sat — 12:00" },
+        { session: "Qualifying", time: "Sat — 15:00" },
+        { session: "Race", time: "Sun — 14:00" },
       ],
     },
     miami: {
@@ -161,11 +161,11 @@ const CircuitDetail = () => {
         "Zone 3 - Start/Finish straight • Detection 15 m after T17",
       ],
       schedule: [
-        { session: "Practice 1", time: "Fri - 11:30" },
-        { session: "Practice 2", time: "Fri - 15:00" },
-        { session: "Practice 3", time: "Sat - 12:00" },
-        { session: "Qualifying", time: "Sat - 15:00" },
-        { session: "Race", time: "Sun - 14:00" },
+        { session: "Practice 1", time: "Fri — 11:30" },
+        { session: "Practice 2", time: "Fri — 15:00" },
+        { session: "Practice 3", time: "Sat — 12:00" },
+        { session: "Qualifying", time: "Sat — 15:00" },
+        { session: "Race", time: "Sun — 14:00" },
       ],
     },
   };
