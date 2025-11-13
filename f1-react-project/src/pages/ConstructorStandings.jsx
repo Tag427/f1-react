@@ -5,16 +5,16 @@ import "./../css/Standings.css";
 
 const ConstructorStandings = () => {
   const constructors = [
-    { rank: 1, team: "McLaren", engine: "Mercedes", points: 650 },
-    { rank: 2, team: "Mercedes", engine: "Mercedes", points: 325 },
-    { rank: 3, team: "Ferrari", engine: "Ferrari", points: 298 },
-    { rank: 4, team: "Red Bull", engine: "Honda", points: 290 },
-    { rank: 5, team: "Williams", engine: "Mercedes", points: 102 },
-    { rank: 6, team: "Racing Bulls", engine: "Honda", points: 72 },
-    { rank: 7, team: "Aston Martin", engine: "Honda", points: 68 },
-    { rank: 8, team: "Kick Sauber", engine: "Ferrari", points: 55 },
-    { rank: 9, team: "Haas", engine: "Ferrari", points: 46 },
-    { rank: 10, team: "Alpine", engine: "Renault", points: 20 },
+    { rank: 1, team: "McLaren", engine: "Mercedes", points: 756 },
+    { rank: 2, team: "Mercedes", engine: "Mercedes", points: 398 },
+    { rank: 3, team: "Red Bull", engine: "Honda", points: 366 },
+    { rank: 4, team: "Ferrari", engine: "Ferrari", points: 362 },
+    { rank: 5, team: "Williams", engine: "Mercedes", points: 111 },
+    { rank: 6, team: "Racing Bulls", engine: "Honda", points: 82 },
+    { rank: 7, team: "Aston Martin", engine: "Honda", points: 72 },
+    { rank: 8, team: "Haas", engine: "Ferrari", points: 70 },
+    { rank: 9, team: "Kick Sauber", engine: "Ferrari", points: 62 },
+    { rank: 10, team: "Alpine", engine: "Renault", points: 22 },
   ];
 
   return (
