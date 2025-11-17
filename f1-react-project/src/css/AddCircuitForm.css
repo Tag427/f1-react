@@ -1,0 +1,123 @@
+.add-circuit-form-container {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space5);
+    margin-bottom: var(--space6);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .add-circuit-form-container h2 {
+    margin-top: 0;
+    margin-bottom: var(--space3);
+    color: var(--text);
+    font-size: 1.75rem;
+  }
+  
+  .form-description {
+    color: var(--muted);
+    margin-bottom: var(--space4);
+  }
+  
+  .add-circuit-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space4);
+  }
+  
+  .form-row {
+    display: flex;
+    gap: var(--space4);
+    flex-wrap: wrap;
+  }
+  
+  .form-group {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: var(--space2);
+    font-size: 0.95rem;
+  }
+  
+  .form-group input {
+    padding: var(--space3);
+    background: #1a1a1a;
+    border: 1px solid var(--border);
+    border-radius: var(--space2);
+    color: var(--text);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--brand);
+  }
+  
+  .form-group input::placeholder {
+    color: #666;
+  }
+  
+  .submit-btn {
+    padding: var(--space3) var(--space5);
+    background: var(--brand);
+    color: #000;
+    border: none;
+    border-radius: var(--space2);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    align-self: flex-start;
+  }
+  
+  .submit-btn:hover:not(:disabled) {
+    opacity: 0.85;
+  }
+  
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .form-status {
+    padding: var(--space3);
+    border-radius: var(--space2);
+    font-weight: 600;
+    text-align: center;
+    margin-top: var(--space2);
+  }
+  
+  .form-status.success {
+    background: rgba(27, 143, 70, 0.2);
+    border: 1px solid #1b8f46;
+    color: #4ade80;
+  }
+  
+  .form-status.error {
+    background: rgba(196, 56, 56, 0.2);
+    border: 1px solid #c43838;
+    color: #f87171;
+  }
+  
+  @media (max-width: 600px) {
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .form-group {
+      min-width: 100%;
+    }
+  
+    .submit-btn {
+      width: 100%;
+    }
+  }

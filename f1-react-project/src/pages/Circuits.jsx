@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Hero from "../components/Hero";
 import CircuitCard from "../components/CircuitCard";
+import AddCircuitForm from "../components/AddCircuitForm";
 import "./../css/Circuits.css";
 
 const Circuits = () => {
@@ -8,26 +9,30 @@ const Circuits = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchCircuits = async () => {
-      try {
-        const response = await fetch("https://f1-server-vd2b.onrender.com/api/circuits");
-        
-        if (!response.ok) {
-          throw new Error("Failed to fetch circuits");
-        }
-        
-        const data = await response.json();
-        setCircuits(data);
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
+  const fetchCircuits = async () => {
+    try {
+      const response = await fetch("https://f1-server-vd2b.onrender.com/api/circuits");
+      
+      if (!response.ok) {
+        throw new Error("Failed to fetch circuits");
       }
-    };
+      
+      const data = await response.json();
+      setCircuits(data);
+      setLoading(false);
+    } catch (err) {
+      setError(err.message);
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchCircuits();
   }, []);
+
+  const handleCircuitAdded = (newCircuit) => {
+    setCircuits((prevCircuits) => [...prevCircuits, newCircuit]);
+  };
 
   if (loading) {
     return (
@@ -59,6 +64,8 @@ const Circuits = () => {
       />
 
       <main className="container">
+        <AddCircuitForm onCircuitAdded={handleCircuitAdded} />
+
         <section className="circuits-grid" aria-label="Circuit cards">
           {circuits.map((circuit) => (
             <CircuitCard
