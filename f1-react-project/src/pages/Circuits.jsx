@@ -34,6 +34,20 @@ const Circuits = () => {
     setCircuits((prevCircuits) => [...prevCircuits, newCircuit]);
   };
 
+  const handleCircuitUpdated = (updatedCircuit) => {
+    setCircuits((prevCircuits) =>
+      prevCircuits.map((circuit) =>
+        circuit._id === updatedCircuit._id ? updatedCircuit : circuit
+      )
+    );
+  };
+
+  const handleCircuitDeleted = (deletedId) => {
+    setCircuits((prevCircuits) =>
+      prevCircuits.filter((circuit) => circuit._id !== deletedId)
+    );
+  };
+
   if (loading) {
     return (
       <>
@@ -70,10 +84,17 @@ const Circuits = () => {
           {circuits.map((circuit) => (
             <CircuitCard
               key={circuit._id}
+              _id={circuit._id}
               name={circuit.name}
               location={circuit.location}
               imgName={circuit.img_name}
               slug={circuit.slug}
+              length_km={circuit.length_km}
+              laps={circuit.laps}
+              drs_zones={circuit.drs_zones}
+              opened={circuit.opened}
+              onUpdate={handleCircuitUpdated}
+              onDelete={handleCircuitDeleted}
             />
           ))}
         </section>
